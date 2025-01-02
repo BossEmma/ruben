@@ -1,0 +1,140 @@
+body{
+    background-color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#main2{
+    padding-top: 50px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#hero{
+    background-color: #F5F3EF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100dvh;
+}
+
+.hero-content{
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: #007aff;
+    margin-bottom: 10px;
+}
+  
+.hero-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #007aff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.btn:hover {
+    background-color: #005bb5;
+}
+
+.hero-image{
+    height: 60%;
+    width: 100%;
+}
+
+.hero-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+  }
+
+  .card img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    color: #333;
+  }
+
+  .card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4285f4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+
+  .card a:hover {
+    background-color: #357ae8;
+  }
+
+
+@media screen and (max-width: 1000px) {
+    #hero{
+        height: 60dvh;
+    }
+
+    .hero-content{
+        height: 50%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .hero-image{
+        width: 100%;
+        height: 50%;
+    }
+
+    .hero-image img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+}
+
+

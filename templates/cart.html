@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/caro.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Store</title>
+</head>
+<body>
+    {% include "./comps/desknav.html" %}
+
+    {% include "./comps/mobilenav.html" %}
+
+    <div id="main">
+        {% include "./comps/sidenav.html" %}
+
+        <div id="main2">
+
+
+
+        </div>
+    </div>
+
+    {% include "./comps/footer.html" %}
+</body>
+</html>

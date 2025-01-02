@@ -1,0 +1,108 @@
+<style>
+    #desk-nav{
+        position: fixed;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        box-sizing: border-box;
+        box-shadow: 0 0 10px rgb(159, 159, 159);
+        z-index: 999;
+    }
+    
+    #desk-nav .con1{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 60%;
+        box-sizing: border-box;
+    }
+    
+    #desk-nav .con2{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 15%;
+        box-sizing: border-box;
+    }
+    
+    #desk-nav div a{
+        color: rgb(58, 58, 58);
+        text-decoration: none;
+        font-size: 14px;
+    }
+    
+    #desk-nav div a:hover{
+        color: rgb(0, 166, 255);
+    }
+
+    #desk-nav .search-bar {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10px;
+    }
+
+    #desk-nav .search-bar input {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid rgb(159, 159, 159);
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    @media screen and (max-width: 1000px) {
+        #desk-nav{
+            display: none;
+        }   
+    }
+</style>
+
+<div id="desk-nav">
+    <div class="con1">
+        <a href="#">Phones</a>
+        <a href="#">Earbuds</a>
+        <a href="#">Tablets</a>
+        <a href="#">Watches & Trackers</a>
+        <a href="#">Smart Home</a>      
+        <a href="#">Accessories</a>
+        <a href="#">Offers</a>   
+        <a href="#">Support</a>         
+    </div>
+
+    <div class="search-bar" style="display: none;">
+        <input type="text" placeholder="Search..." id="search-input" />
+    </div>
+
+    <div class="con2">
+        <a href="#" id="search-toggle"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="#"><i class="fa-solid fa-user"></i></a>
+    </div>
+</div>
+
+
+<script>
+    // JavaScript to toggle search bar and navigation links
+    document.getElementById('search-toggle').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+        const con1 = document.querySelector('.con1');
+        const searchBar = document.querySelector('.search-bar');
+
+        // Toggle visibility
+        if (con1.style.display === 'none') {
+            con1.style.display = 'flex';
+            searchBar.style.display = 'none';
+        } else {
+            con1.style.display = 'none';
+            searchBar.style.display = 'flex';
+        }
+    });
+</script>

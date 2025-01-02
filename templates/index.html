@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/caro.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Store</title>
+</head>
+<body>
+    {% include "./comps/desknav.html" %}
+
+    {% include "./comps/mobilenav.html" %}
+
+    <div id="main">
+        {% include "./comps/sidenav.html" %}
+
+        <div id="main2">
+            <section id="hero">
+                <div class="hero-content">
+                    <h1>Oh hi, AI.</h1>
+                    <p>Meet the new Pixel 9 Pro XL, Pixel 9 Pro, Pixel 9, and Pixel 9 Pro Fold with Gemini.</p>
+                    <button class="btn">Browse phones</button>
+                </div>
+                <div class="hero-image">
+                    <img src="{% static 'images/hero-bg.webp' %}" alt="Phones">
+                </div>
+            </section>
+
+            <section class="popular-section">
+                <h2>Popular on the Google Store.</h2>
+                <div class="carousel">
+                  <button class="arrow left" aria-label="Previous">
+                    <span>&#8249;</span>
+                  </button>
+                  <div class="carousel-track">
+                    <div class="carousel-item">
+                      <span class="new-badge">New</span>
+                      <img src="https://lh3.googleusercontent.com/FKvXXY-2diMsRDoysMIW2IPrtDrME8chYPvy13tUITM2haa1V9k-HnZNBF6HKcnrP4WV-hZwC_-XvDskWIrv228xvURwZ13d6A=rw-e365-w3000" alt="Pixel 9">
+                      <h3>Pixel 9</h3>
+                      <p>From $799</p>
+                      <a href="#">Buy &rarr;</a>
+                    </div>
+                    <div class="carousel-item">
+                      <span class="new-badge">New</span>
+                      <img src="https://lh3.googleusercontent.com/FKvXXY-2diMsRDoysMIW2IPrtDrME8chYPvy13tUITM2haa1V9k-HnZNBF6HKcnrP4WV-hZwC_-XvDskWIrv228xvURwZ13d6A=rw-e365-w3000" alt="Pixel Watch 3">
+                      <h3>Pixel Watch 3</h3>
+                      <p>From $349.99</p>
+                      <a href="#">Buy &rarr;</a>
+                    </div>
+                    <div class="carousel-item">
+                      <span class="new-badge">New</span>
+                      <img src="https://lh3.googleusercontent.com/FKvXXY-2diMsRDoysMIW2IPrtDrME8chYPvy13tUITM2haa1V9k-HnZNBF6HKcnrP4WV-hZwC_-XvDskWIrv228xvURwZ13d6A=rw-e365-w3000" alt="Pixel Buds Pro 2">
+                      <h3>Pixel Buds Pro 2</h3>
+                      <p>$229</p>
+                      <a href="#">Buy &rarr;</a>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://lh3.googleusercontent.com/FKvXXY-2diMsRDoysMIW2IPrtDrME8chYPvy13tUITM2haa1V9k-HnZNBF6HKcnrP4WV-hZwC_-XvDskWIrv228xvURwZ13d6A=rw-e365-w3000" alt="Nest Learning Thermostat">
+                      <h3>Nest Learning Thermostat</h3>
+                      <p>$279.99</p>
+                      <a href="#">Buy &rarr;</a>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://lh3.googleusercontent.com/FKvXXY-2diMsRDoysMIW2IPrtDrME8chYPvy13tUITM2haa1V9k-HnZNBF6HKcnrP4WV-hZwC_-XvDskWIrv228xvURwZ13d6A=rw-e365-w3000" alt="Google TV Streamer">
+                      <h3>Google TV Streamer (4K)</h3>
+                      <p>$99.99</p>
+                      <a href="#">Buy &rarr;</a>
+                    </div>
+                  </div>
+                  <button class="arrow right" aria-label="Next">
+                    <span>&#8250;</span>
+                  </button>
+                </div>
+              </section>
+
+
+              <div class="container">
+                <div class="card">
+                  <img src="https://lh3.googleusercontent.com/mlmED2sjC0Dx6S_boGkY4c_BIUIQh0DfRJoeiATyUa_JtxEuh8yIfENCh4-kcRyQXLbNGQP7Ma2Rw-nUeTUeFAsid1LEFocu0E8=rw-e365-w3000" alt="Pixel Pro 8">
+                  <h2>All pro. Pure magic.</h2>
+                  <a href="#">Learn more</a>
+                </div>
+                <div class="card">
+                  <img src="https://lh3.googleusercontent.com/mlmED2sjC0Dx6S_boGkY4c_BIUIQh0DfRJoeiATyUa_JtxEuh8yIfENCh4-kcRyQXLbNGQP7Ma2Rw-nUeTUeFAsid1LEFocu0E8=rw-e365-w3000" alt="Pixel 8">
+                  <h2>A phone full of firsts.</h2>
+                  <a href="#">Learn more</a>
+                </div>
+                <div class="card">
+                  <img src="https://lh3.googleusercontent.com/mlmED2sjC0Dx6S_boGkY4c_BIUIQh0DfRJoeiATyUa_JtxEuh8yIfENCh4-kcRyQXLbNGQP7Ma2Rw-nUeTUeFAsid1LEFocu0E8=rw-e365-w3000" alt="Pixel Tablet">
+                  <h2>An epic display of Google AI.</h2>
+                  <a href="#">Learn more</a>
+                </div>
+                <div class="card">
+                  <img src="https://lh3.googleusercontent.com/mlmED2sjC0Dx6S_boGkY4c_BIUIQh0DfRJoeiATyUa_JtxEuh8yIfENCh4-kcRyQXLbNGQP7Ma2Rw-nUeTUeFAsid1LEFocu0E8=rw-e365-w3000" alt="Pixel Watch 2">
+                  <h2>Goals. Guidance. Gorgeous.</h2>
+                  <a href="#">Learn more</a>
+                </div>
+                <div class="card">
+                  <img src="https://lh3.googleusercontent.com/mlmED2sjC0Dx6S_boGkY4c_BIUIQh0DfRJoeiATyUa_JtxEuh8yIfENCh4-kcRyQXLbNGQP7Ma2Rw-nUeTUeFAsid1LEFocu0E8=rw-e365-w3000" alt="Pixel Buds Pro">
+                  <h2>Help in your hand. And at home.</h2>
+                  <a href="#">Learn more</a>
+                </div>
+                <div class="card">
+                  <img src="https://lh3.googleusercontent.com/mlmED2sjC0Dx6S_boGkY4c_BIUIQh0DfRJoeiATyUa_JtxEuh8yIfENCh4-kcRyQXLbNGQP7Ma2Rw-nUeTUeFAsid1LEFocu0E8=rw-e365-w3000" alt="Pixel Buds A-Series">
+                  <h2>Light ears ahead.</h2>
+                  <a href="#">Learn more</a>
+                </div>
+              </div>
+
+
+
+        </div>
+    </div>
+
+    {% include "./comps/footer.html" %}
+</body>
+</html>

@@ -1,0 +1,45 @@
+{% load static %}
+<script src="{% static 'js/script.js' %}"></script>
+<style>
+    #side-nav{
+        height: 100%;
+        width: 70%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: white;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 100px;
+        line-height: 1.5;
+        z-index: 2;
+        display: none;
+        flex-direction: column;
+        box-shadow:  0 0 10px rgb(61, 61, 61);
+    }
+    
+    #side-nav a{
+        color: rgb(58, 58, 58);
+        text-decoration: none;
+        padding: 15px;
+        box-sizing: border-box;
+    }    
+
+    @media screen and (max-width: 1000px) {
+        #side-nav{
+            display: flex;
+            width: 0%;
+        }   
+    }
+</style>
+
+<div id="side-nav">
+    <a href="#">Phones</a>
+    <a href="#">Earbuds</a>
+    <a href="#">Tablets</a>
+    <a href="#">Watches & Trackers</a>
+    <a href="#">Smart Home</a>      
+    <a href="#">Accessories</a>
+    <a href="#">Offers</a>   
+    <a href="#">Support</a>  
+</div>

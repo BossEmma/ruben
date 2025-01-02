@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Navigation with Search</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* Mobile Navigation Styles */
+        #mobile-nav {
+            position: fixed;
+            background-color: white;
+            width: 100%;
+            display: none;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            z-index: 5;
+            box-sizing: border-box;
+            box-shadow: 0 0 10px rgb(159, 159, 159);
+        }
+
+        #mobile-nav .con2 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 40%;
+            box-sizing: border-box;
+        }
+
+        #mobile-nav div a {
+            color: rgb(58, 58, 58);
+            text-decoration: none;
+        }
+
+        /* Search Bar Styles */
+        #search-bar {
+            display: none;
+            flex-grow: 1;
+            margin-left: 15px;
+            align-items: center;
+        }
+
+        #search-bar input {
+            width: 80%;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #search-bar .cancel {
+            margin-left: 10px;
+            color: red;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #search-bar .search-icon {
+            margin-left: 10px;
+            color: rgb(0, 166, 255);
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 1000px) {
+            #mobile-nav {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav">
+        <!-- Hamburger Icon -->
+        <div class="con1">   
+            <a href='#' onclick="ToggleNav()">    
+                <i class="fa-solid fa-bars"></i>  
+            </a> 
+        </div>
+
+        <!-- Navigation Icons -->
+        <div class="con2" id="icon-container">
+            <a href="#" onclick="ToggleSearch()"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#"><i class="fa-solid fa-user"></i></a>
+        </div>
+
+        <!-- Search Bar -->
+        <div id="search-bar">
+            <input type="text" id="search-input" placeholder="Search...">
+            <span class="cancel" onclick="CancelSearch()">Cancel</span>
+            <i class="fa-solid fa-magnifying-glass search-icon" onclick="ActivateSearch()"></i>
+        </div>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+    <script>
+        // Toggle the sliding navigation menu
+        function ToggleNav() {
+            const navMenu = document.getElementById('nav-menu');
+            if (navMenu.style.left === '0%') {
+                navMenu.style.left = '-100%'; // Hide menu
+            } else {
+                navMenu.style.left = '0%'; // Show menu
+            }
+        }
+
+        // Toggle the search bar
+        function ToggleSearch() {
+            const iconContainer = document.getElementById('icon-container');
+            const searchBar = document.getElementById('search-bar');
+
+            if (searchBar.style.display === 'none') {
+                // Hide icons and show search bar
+                iconContainer.style.display = 'none';
+                searchBar.style.display = 'flex';
+            } else {
+                // Show icons and hide search bar
+                iconContainer.style.display = 'flex';
+                searchBar.style.display = 'none';
+            }
+        }
+
+        // Cancel the search and return to icons
+        function CancelSearch() {
+            const iconContainer = document.getElementById('icon-container');
+            const searchBar = document.getElementById('search-bar');
+
+            // Reset the search bar
+            document.getElementById('search-input').value = '';
+            iconContainer.style.display = 'flex';
+            searchBar.style.display = 'none';
+        }
+
+        // Activate the search functionality
+        function ActivateSearch() {
+            const searchInput = document.getElementById('search-input').value;
+            if (searchInput.trim() !== '') {
+                alert(`Searching for: ${searchInput}`);
+                // Perform search logic here
+            }
+        }
+
+        // Add "Enter" key functionality for the search
+        document.getElementById('search-input').addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') {
+                ActivateSearch();
+            }
+        });
+    </script>
+</body>
+</html>
