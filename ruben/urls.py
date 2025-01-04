@@ -21,8 +21,11 @@ from ruben_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('login/', views.login, name='login'),
+    path('signup/', views.signup, name='signup'),
     path('search/', views.search, name='search'),
     path('cart/', views.cart, name='cart'),
     path('detail/', views.detail, name='detail'),  
-    path('phones/', views.phones, name='phones')    
+    path('category/', views.phones, name='phones'),
+    path('profile/', views.profile, name='profile')   
 ]

@@ -2,7 +2,8 @@
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px;
+    box-sizing: border-box;
   }
   
   /* Search Header */
@@ -76,4 +77,16 @@
   .card .description {
     color: #555;
     font-size: 14px;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .container {
+        padding-top: 70px;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+      }
+      
+
   }

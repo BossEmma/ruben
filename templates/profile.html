@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/caro.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Store</title>
+</head>
+<body>
+    {% include "./comps/desknav.html" %}
+
+    {% include "./comps/mobilenav.html" %}
+
+    <div id="main">
+        {% include "./comps/sidenav.html" %}
+
+        <div id="main2">
+            <div id="profile" class="cart-style-container">
+                <!-- Profile Header -->
+                <div class="header-section">
+                    <h1>My Profile</h1>
+                </div>
+            
+                <!-- User Information Section -->
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <div class="cart-item-content">
+                            <h2>Personal Information</h2>
+                            <p><strong>Name:</strong> John Doe</p>
+                            <p><strong>Email:</strong> john.doe@example.com</p>
+                            <p><strong>Phone:</strong> +123 456 7890</p>
+                        </div>
+                    </div>
+            
+                    <div class="cart-item">
+                        <div class="cart-item-content">
+                            <h2>Shipping Information</h2>
+                            <p><strong>Address:</strong> 123 Main Street, Springfield</p>
+                            <p><strong>City:</strong> Springfield</p>
+                            <p><strong>State:</strong> IL</p>
+                            <p><strong>Zip Code:</strong> 62704</p>
+                            <p><strong>Country:</strong> USA</p>
+                            <button id="edit-shipping-btn" class="action-btn">Edit Shipping Details</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Edit Shipping Modal -->
+                <div id="edit-shipping-modal" class="modal hidden">
+                    <div class="modal-content">
+                        <span class="close-btn" id="close-modal">&times;</span>
+                        <h2>Edit Shipping Details</h2>
+                        <form id="edit-shipping-form">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" placeholder="Enter new address" required>
+            
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" placeholder="Enter city" required>
+            
+                            <label for="state">State</label>
+                            <input type="text" id="state" name="state" placeholder="Enter state" required>
+            
+                            <label for="zip">Zip Code</label>
+                            <input type="text" id="zip" name="zip" placeholder="Enter zip code" required>
+            
+                            <label for="country">Country</label>
+                            <input type="text" id="country" name="country" placeholder="Enter country" required>
+            
+                            <button type="submit" class="action-btn">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    {% include "./comps/footer.html" %}
+</body>
+</html>

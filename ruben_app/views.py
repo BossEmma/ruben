@@ -5,6 +5,12 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'index.html')
 
+def login(request):
+    return render(request, 'login.html')
+
+def signup(request):
+    return render(request, 'signup.html')
+
 
 def detail(request):
     return render(request, 'detail.html')
@@ -19,4 +25,7 @@ def cart(request):
 
 
 def phones(request):
-    return render(request, 'category.html')
+    return render(request, 'phones.html')
+
+def profile(request):
+    return render(request, 'profile.html')
